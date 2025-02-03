@@ -10,22 +10,28 @@ import matplotlib.pyplot as plt
 import time
 #in order to send sms we need a library that is twilio by register in twilio we will get a twilio phone number, authentication and account sid
 from twilio.rest import Client
+#to use environment variables we need to import load_dotenv
+from dotenv import load_dotenv
+#to use environment variables we need to import os
+import os
+
 # Simulate gradual battery drain
 battery_levels = np.linspace(100, 0, 100)  # Linear decrease from 100% to 0%
 battery_data = pd.DataFrame({
     'timestamp': pd.date_range(start='2024-01-01', periods=100, freq='min'),  # Use 'min' instead of 'T'
     'battery_level': battery_levels
 })
-
-# Twilio credentials
-account_sid = 'ACc36d8833d13a8fcf6f49a3e12a77bc00'
-auth_token = '9abecc65236bf78d5c9ccf7dc800ce14'
-twilio_number = '+18454157347'  # Twilio phone number
+#load environment variables from .env file
+load_dotenv()
+# Twilio credentials by accessing environment variables
+account_sid = os.getenv('TWILIO_ACCOUNT_SID')
+auth_token = os.getenv('TWILIO_AUTH_TOKEN')
+twilio_number = os.getenv('TWILIO_PHONE_NUMBER')# Twilio phone number
 recipient_number = '+917075697459'  # Recipient's phone number
 
 # Email credentials
-sender_email = 'dineshkothalanka2003@gmail.com'  # Replace with your email
-sender_password = 'eyrl jdtq lcfo sphy'  # Replace with your password or app password
+sender_email = os.getenv('SENDER_EMAIL')  # Replace with your email
+sender_password =os.getenv('SENDER_EMAIL_PASSWORD')  # Replace with your password or app password
 recipient_email = 'tirumulasettir@gmail.com'  # Recipient's email
 
 # Cooldown period (in seconds)

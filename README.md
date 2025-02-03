@@ -1,4 +1,4 @@
- Battery Drain Alert System
+Battery Drain Alert System
 
 A Python-based system to monitor battery levels and send alerts via SMS and email. This project is designed to help users proactively manage battery levels in medical devices or other critical systems.
 Features
@@ -15,7 +15,7 @@ Libraries: pandas, numpy, matplotlib, twilio, smtplib
 Installation
 1. Clone the repository:
    bash
-   git clone https://github.com/Dineshkothalanka/Battery---Drain---Alert---System.git
+   git clone https://github.com/Dineshkothalanka/Battery--Drain--Alert.git
    
 2. Navigate to the project folder:
    bash
@@ -86,4 +86,4 @@ Thanks to Matplotlib for the visualization library.
 Contact
 For questions or feedback, feel free to reach out:
 Email: dineshkothalanka2003@gmail.com
-GitHub: https://github.com/Dineshkothalanka/Dinesh
+GitHub: https://github.com/Dineshkothalanka
